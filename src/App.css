@@ -1,0 +1,152 @@
+#root {
+  max-width: 1280px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  background: url('./img/home.jpg');
+  background-size: 1280px auto;
+
+
+}
+
+.blockLogo {
+  width: 100px;
+  min-height: 100px;
+}
+
+.blockHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+}
+
+
+.logo {
+  width: 130px;
+  height: 130px;
+  margin-top: 20px;
+  margin-left: -210px;
+  border-radius: 50%;
+  /* круглый логотип */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* мягкая тень */
+  object-fit: cover;
+  /* чтобы не растягивался */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* плавность */
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  /* немного увеличивается при наведении */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.blockTittle {
+  display: inline;
+  text-align: center;
+
+}
+
+.tittle {
+  font-size: 90px;
+  font-weight: 900;
+  font-family: 'Poppins', 'Arial', sans-serif;
+  /* современный шрифт */
+  color: #ff4500;
+  /* яркий оранжевый цвет, можно заменить */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: transform 0.3s ease;
+}
+
+.tittle:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.menu-button {
+  position: fixed;
+  /* фиксированное позиционирование относительно окна */
+
+  left: 50%;
+  /* по горизонтали центр */
+  transform: translate(-50%, -50%);
+  /* сдвиг, чтобы центрировать */
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  z-index: 1000;
+  /* чтобы быть поверх других элементов */
+}
+
+.menu-button span {
+  display: block;
+  height: 4px;
+  background: #ff4500;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+/* Анимация для крестика при открытом меню */
+.menu-button.open span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 8px);
+}
+
+.menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Меню */
+.menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  color: #ff4500;
+}
