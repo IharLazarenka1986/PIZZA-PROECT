@@ -1,13 +1,20 @@
 import { useState } from "react";
 
-const MenuButton = () => {
+const MenuButton = ({ setSection }) => {
   const [open, setOpen] = useState(false);
+
+  const handleClick = (sectionName) => {
+    setOpen(false);
+    if (sectionName !== 'contacts') {
+      setSection(sectionName);
+    }
+  };
 
   return (
     <>
-      <button 
-        className={`menu-button ${open ? "open" : ""}`} 
-        onClick={() => setOpen(!open)} 
+      <button
+        className={`menu-button ${open ? "open" : ""} animate-bounce`}
+        onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
         <span></span>
@@ -16,12 +23,22 @@ const MenuButton = () => {
       </button>
 
       {open && (
-        <nav className="menu">
+        <nav className="menu animate-slide-down">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#pizzas">Pizzas</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#home" onClick={() => handleClick('home')} className="menu-link">Home</a></li>
+            <li><a href="#pizzas" onClick={() => handleClick('pizza')} className="menu-link">Pizzas</a></li>
+            <li><a href="#about" onClick={() => handleClick('about')} className="menu-link">About</a></li>
+            <li>
+              <a
+                href="https://github.com/IharLazarenka1986"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="menu-link"
+                onClick={() => setOpen(false)}
+              >
+                Contacts
+              </a>
+            </li>
           </ul>
         </nav>
       )}
@@ -30,4 +47,5 @@ const MenuButton = () => {
 };
 
 export default MenuButton;
+
 
