@@ -48,8 +48,8 @@ body {
 }
 
 .tittle {
-  font-size: 64px;
-  color: #ff4500;
+  font-size: 80px;
+  color: #864b35;
   margin: 0;
   user-select: none;
   text-shadow:
@@ -111,9 +111,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: white;
+  width: 100vw; 
+  height: 100vh; 
+  background: url(./img/menuImg.jpg) no-repeat center center;
+  background-size: cover; 
   display: flex;
   justify-content: center;
   align-items: center;
