@@ -180,6 +180,7 @@ body {
   font-size: 70px;
   margin-bottom: 30px;
   user-select: none;
+  margin-top: -145px;
 }
 
 .order-btn {

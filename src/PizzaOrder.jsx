@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 const ingredientsData = [
-  { id: 1, name: 'Сыр', price: 20 },
-  { id: 2, name: 'Ветчина', price: 30 },
-  { id: 3, name: 'Грибы', price: 25 },
-  { id: 4, name: 'Оливки', price: 15 },
+  { id: 1, name: 'Сыр', price: 20, weight:150},
+  { id: 2, name: 'Ветчина', price: 30, weight:150 },
+  { id: 3, name: 'Грибы', price: 25, weight:150 },
+  { id: 4, name: 'Оливки', price: 15, weight:150 },
 ];
 
 const saucesData = [
@@ -64,15 +64,15 @@ const PizzaOrder = ({ onBackToHome }) => {
         <h3>Размер:</h3>
         <label className="radio-label">
           <input type="radio" value="small" checked={size === 'small'} onChange={() => setSize('small')} />
-          Маленькая
+          Маленькая (300 г)
         </label>
         <label className="radio-label">
           <input type="radio" value="medium" checked={size === 'medium'} onChange={() => setSize('medium')} />
-          Средняя
+          Средняя (400 г)
         </label>
         <label className="radio-label">
           <input type="radio" value="large" checked={size === 'large'} onChange={() => setSize('large')} />
-          Большая
+          Большая (500 г)
         </label>
       </div>
 
@@ -94,14 +94,14 @@ const PizzaOrder = ({ onBackToHome }) => {
 
       <div>
         <h3>Ингредиенты:</h3>
-        {ingredientsData.map(({ id, name, price }) => (
+        {ingredientsData.map(({ id, name, price, weight }) => (
           <label key={id} className="checkbox-label">
             <input
               type="checkbox"
               checked={selectedIngredients.includes(id)}
               onChange={() => toggleIngredient(id)}
             />
-            {name} (+{price}р)
+                {name} (+{price}р) (+{weight}гр)
           </label>
         ))}
       </div>
