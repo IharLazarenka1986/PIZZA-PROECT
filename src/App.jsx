@@ -3,6 +3,7 @@ import Header from './Header';
 import MenuButton from './MenuButton';
 import PizzaBuilder from './PizzaBuilder';
 import About from './About';
+import MapComponent from './MapComponent';
 import './App.css';
 
 function App() {
@@ -22,7 +23,14 @@ function App() {
         {section === 'home' && (
           <div className="home-screen">
             <h2 className="tagline animate-fade-in">Welcome to PizzAmore</h2>
-            <button className="order-btn animate-pulse" onClick={() => setSection('pizza')}>
+
+            {/* Карта выше кнопки */}
+            <MapComponent />
+
+            <button
+              className="order-btn animate-pulse"
+              onClick={() => setSection('pizza')}
+            >
               Make Your Pizza
             </button>
           </div>
@@ -34,3 +42,6 @@ function App() {
 }
 
 export default App;
+
+
+
