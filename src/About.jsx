@@ -4,27 +4,29 @@ import './App.css';
 const About = ({ onBack }) => {
   return (
     <div className="about-container animate-fade-in-up">
-      <h2>History of Pizzerias</h2>
+      <h2>История пиццерий</h2>
       <p>
-        The first pizzeria, known as Antica Pizzeria Port'Alba, was opened in Naples in 1830. It still operates today. This pizzeria even had a special payment system allowing customers to pay for pizza within eight days.
+     
+Первая пиццерия, известная как Antica Pizzeria Port'Alba, открылась в Неаполе в 1830 году. Она работает и по сей день. В ней даже существовала специальная система оплаты, позволяющая клиентам оплачивать пиццу в течение восьми дней.
+      </p>
+      <p><strong>Древние корни:</strong> Выпечка хлеба с различными начинками была известна еще в древних цивилизациях: евреях, вавилонянах, египтянах и греках.
+        
       </p>
       <p>
-        <strong>Ancient roots:</strong> Baked bread with various toppings was known in ancient civilizations like the Jews, Babylonians, Egyptians, and Greeks.
+        <strong>
+Фокачча:</strong> В Древнем Риме существовала разновидность фокаччи под названием panis focacius, считавшаяся предшественницей пиццы.
       </p>
       <p>
-        <strong>Focaccia:</strong> In Ancient Rome, there was a type of focaccia called panis focacius, considered a precursor to pizza.
+        <strong>Первая пиццерия:</strong> Как уже упоминалось, пиццерия Antica Pizzeria Port'Alba открылась в Неаполе в 1830 году.
       </p>
       <p>
-        <strong>First pizzeria:</strong> As mentioned, Antica Pizzeria Port'Alba opened in Naples in 1830.
+        <strong>Маргарита:</strong> В 1889 году в честь королевы Маргариты Савойской была создана пицца «Маргарита», украшенная помидорами, моцареллой и базиликом — цветами итальянского флага.
       </p>
       <p>
-        <strong>Margherita:</strong> In 1889, Pizza Margherita was created in honor of Queen Margherita of Savoy, topped with tomatoes, mozzarella, and basil – the colors of the Italian flag.
-      </p>
-      <p>
-        <strong>Spread:</strong> Over time, pizza became popular throughout Italy and then globally, thanks to Italian immigrants.
+        <strong>Распространение:</strong> Со временем пицца стала популярной по всей Италии, а затем и по всему миру благодаря итальянским иммигрантам.
       </p>
       <button onClick={onBack} className="back-btn animate-shadow-glow">
-        Back
+        НА ГЛАВНУЮ
       </button>
     </div>
   );
