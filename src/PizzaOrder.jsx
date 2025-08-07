@@ -50,7 +50,6 @@ const PizzaOrder = ({ onBackToHome }) => {
     setSelectedSauce(null);
     setSelectedIngredients([]);
     setSubmitted(false);
-    // Если передали функцию для возврата в главное меню - вызываем её
     if (onBackToHome) {
       onBackToHome();
     }
@@ -106,7 +105,7 @@ const PizzaOrder = ({ onBackToHome }) => {
         ))}
       </div>
 
-      {/* Круговой прогресс */}
+    
       <div className="progress-container" style={{ textAlign: 'center', marginTop: '30px' }}>
         <svg width="120" height="120">
           <circle cx="60" cy="60" r="50" stroke="#ddd" strokeWidth="10" fill="none" />

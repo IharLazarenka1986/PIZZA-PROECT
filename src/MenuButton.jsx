@@ -25,9 +25,9 @@ const MenuButton = ({ setSection }) => {
       {open && (
         <nav className="menu animate-slide-down">
           <ul>
-            <li><a href="#home" onClick={() => handleClick('home')} className="menu-link">Home</a></li>
-            <li><a href="#pizzas" onClick={() => handleClick('pizza')} className="menu-link">Pizzas</a></li>
-            <li><a href="#about" onClick={() => handleClick('about')} className="menu-link">About</a></li>
+            <li><a href="#home" onClick={() => handleClick('home')} className="menu-link">ГЛАВНАЯ</a></li>
+            <li><a href="#pizzas" onClick={() => handleClick('pizza')} className="menu-link">ЗАКАЗ</a></li>
+            <li><a href="#about" onClick={() => handleClick('about')} className="menu-link">О НАС</a></li>
             <li>
               <a
                 href="https://github.com/IharLazarenka1986"
@@ -36,7 +36,7 @@ const MenuButton = ({ setSection }) => {
                 className="menu-link"
                 onClick={() => setOpen(false)}
               >
-                Contacts
+                Контакты
               </a>
             </li>
           </ul>

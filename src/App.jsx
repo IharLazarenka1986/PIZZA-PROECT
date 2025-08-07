@@ -22,16 +22,13 @@ function App() {
       <main>
         {section === 'home' && (
           <div className="home-screen">
-            <h2 className="tagline animate-fade-in">Welcome to PizzAmore</h2>
-
-            {/* Карта выше кнопки */}
+            <h2 className="tagline animate-fade-in">Welcome to PizzAmore</h2>            
             <MapComponent />
-
             <button
               className="order-btn animate-pulse"
               onClick={() => setSection('pizza')}
             >
-              Make Your Pizza
+              Сделай пиццу
             </button>
           </div>
         )}
